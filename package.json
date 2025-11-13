@@ -1,7 +1,7 @@
 {
   "name": "@plotvideo/diffusionstudio",
   "private": false,
-  "version": "1.6.0-V2",
+  "version": "1.6.0-V3",
   "type": "module",
   "description": "Build bleeding edge video processing applications",
   "files": [
@@ -58,7 +58,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:diffusionstudio/core.git"
+    "url": "git@github.com:hooooooouzx/diffusionstudio-core.git"
   },
   "keywords": [
     "mp4",

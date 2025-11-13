@@ -334,7 +334,6 @@ export class Composition extends EventEmitterMixin<CompositionEvents, typeof Ser
 		this.context?.drawImage(this.renderer.canvas, 0, 0);
 
 		this.trigger('currentframe', this.frame);
-		console.log('trigger currentframe 03')
 
 		if (this.playing) {
 			this.frame++;

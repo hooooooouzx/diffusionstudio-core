@@ -1,7 +1,7 @@
 {
   "name": "@plotvideo/diffusionstudio",
   "private": false,
-  "version": "1.6.0",
+  "version": "1.6.0-V1",
   "type": "module",
   "description": "Build bleeding edge video processing applications",
   "files": [

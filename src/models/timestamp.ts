@@ -68,6 +68,8 @@ export class Timestamp implements Omit<Serializer, 'id'> {
 	public addMillis(value: number): this {
 		this.millis = this.millis + value;
 
+		console.log(`Added ${value} milliseconds. Updated this.millis value: ${this.millis}`);
+
 		return this;
 	}
 
@@ -78,6 +80,8 @@ export class Timestamp implements Omit<Serializer, 'id'> {
 		const millis = framesToMillis(value);
 
 		this.millis = this.millis + millis;
+
+		console.log(`Added ${value} frames, which equals ${millis} milliseconds. Updated this.millis value: ${this.millis}`);
 
 		return this;
 	}

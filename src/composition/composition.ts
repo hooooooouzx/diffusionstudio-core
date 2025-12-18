@@ -5,7 +5,7 @@
  * Public License, v. 2.0 that can be found in the LICENSE file.
  */
 
-import { autoDetectRenderer, Container } from 'pixi.js';
+import { Container } from 'pixi.js';
 import { MediaClip } from '../clips';
 import { BaseError } from '../errors';
 import { EventEmitterMixin } from '../mixins';
@@ -99,18 +99,18 @@ export class Composition extends EventEmitterMixin<CompositionEvents, typeof Ser
 		this.on('frame', this.update.bind(this));
 		this.on('error', this.update.bind(this));
 
-		autoDetectRenderer({ ...this.settings, preference: backend })
-			.then(renderer => {
-				this.renderer = renderer;
-				this.trigger('init', undefined);
-			})
-			.catch(error => {
-				console.error(error);
-				this.trigger('error', new BaseError({
-					code: 'backendDetectionError',
-					message: `${error}`
-				}));
-			});
+		// autoDetectRenderer({ ...this.settings, preference: backend })
+		// 	.then(renderer => {
+		// 		this.renderer = renderer;
+		// 		this.trigger('init', undefined);
+		// 	})
+		// 	.catch(error => {
+		// 		console.error(error);
+		// 		this.trigger('error', new BaseError({
+		// 			code: 'backendDetectionError',
+		// 			message: `${error}`
+		// 		}));
+		// 	});
 	}
 
 	/**
